@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Latihan ke Tujuh</title>
+    </head>
+    <body>
+        <div id="app">
+            <counter></counter>
+            <counter></counter>
+            <counter></counter>
+        </div>
+
+        <script>
+            Vue.component('counter',
+            {
+                data:function(){
+                    return{
+                        count:0
+                    }
+                },
+                template:'<button @click="count++">{{count}}</button>'
+            });
+
+            new Vue({el:'#app'})
+        </script>
+    </body>
+</html>

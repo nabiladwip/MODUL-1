@@ -1,0 +1,21 @@
+<html lang=en>
+    <head>
+        <script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Latihan Keenam</title>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on click="pesan">Tampil Pesam</button>
+        </div>
+        <script>
+            var app= new Vue({
+                el:"#app",
+                methods:{
+                    pesan:function(){
+                        alert("Selamat belajar Vue.js")
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

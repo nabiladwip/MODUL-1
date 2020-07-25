@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Latihan Ke empat</title>
+    </head>
+    <body>
+        <div id="lat4">
+            <p v-if="itemInStock > 10">{{itemInStock}} in Stock</p>
+            <p v-else-if="itemInStock > 0"> Hurry Up, Only {{itemInStock}} item left </p>
+            <p v-else>Sorry, we are all out</p>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    "itemInStock" : 10
+                }
+            })
+        </script>
+    </body>
+</html>

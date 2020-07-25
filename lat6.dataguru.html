@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Data Guru</title>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on click="pesan">Tampil Pesam</button>
+            <h3> Masukkan Nama Guru</h3>
+            <form v-on:submmit.prevent>
+                <input type="text" name="namaSiswa" id="namaSiswa" @keyup.enter="Simpan" v-model="guru">
+                <button type="button"@click="simpan">Simpan</button>
+            </form>
+            <br><br>
+
+            <table border="1" style="border-collapse:collapse"v-if="dataGuru.length>0">
+            <tr>
+                <thead>
+                    <th style="width:30px">#</th>
+                    <th style="width:200px">Nama Gur</th>
+                </thead>
+            </tr>
+            <tr>
+                <tbody v-for="guru,index)in dataGuru":key="index">
+                    <td>{{index+1}}</td>
+                    <td>{{guru}}</td>
+                </tbody>
+            </tr>
+        </table>
+        </div>
+
+        <script>
+            var app=new Vue({
+                el:"#app",
+                methods:{
+                    pesan:function(){
+                        alert("Selamat belajar vue.js")
+                    },
+                    Simpan:function(){
+                        this.dataGuru.push(this.guru);
+                        this.guru="";
+                    }
+                },
+                data:{
+                    'datGuru':[
+                        {'nama':'Nabila','kelas':'XRPL1'},
+                        {'nama':'Dwi','kelas':'XRPL2'},
+                        {'nama':'Paramita','kelas':'XRPL3'},
+                        {'nama':'Aliban','kelas':'XRPL4'},
+                        {'nama':'Iwd','kelas':'XRPL5'},
+                        {'nama':'Atimarap','kelas':'XRPL6'},
+                    ],
+                    'guru' :''
+                }
+            })
+        </script>
+    </body>
+</html>

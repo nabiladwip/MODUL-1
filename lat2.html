@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Latihan Kedua</title>
+    </head>
+    <body>
+        <div id="app">
+           <p>{{greet('Nabila gemoi')}}</p>
+        </div>
+        
+        <script>
+            var app = new Vue({
+                el : "#app",
+                methods:{
+                    greet : function(name){
+                        return 'Good Morning' + name;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
